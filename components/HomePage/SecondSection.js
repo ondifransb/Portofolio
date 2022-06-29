@@ -8,7 +8,7 @@ const SecondPage = ({ animate }) => {
 		<SecondSection animateit={animate}>
 			<Image
 				className={styles.Images}
-				src="/ProfilePict.jpeg"
+				src={"/static/ProfilePict.jpeg"}
 				width="300"
 				height="300"
 				alt="Profile Picture"
