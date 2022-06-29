@@ -28,7 +28,7 @@ export default function Home() {
 	//VIEW
 	return (
 		<MainContainer>
-			<FirstPage animate={show} />
+			<FirstPage />
 			<SecondPage animate={show} />
 		</MainContainer>
 	);

@@ -10,11 +10,6 @@ export const MainContainer = styled.div`
 export const H1 = styled.h1`
 	font-size: clamp(1.7rem, -0.875rem + 8.333vw, 3.5rem);
 	color: black;
-	animation: ${(props) =>
-		props.animateit &&
-		css`
-			${animation1} 0.5s  ease-out forwards;
-		`};
 `;
 
 export const Span = styled.span`
@@ -133,15 +128,6 @@ export const SecondSection = styled.section`
 	@media only screen and (max-width: 767px) {
 		flex-direction: column;
 	}
-`;
-
-const animation1 = keyframes`
-0%{
-	color: black;
-}
-100%{
-	color: white;
-}
 `;
 
 const animation2 = keyframes`

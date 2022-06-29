@@ -1,9 +1,9 @@
 import { FirstSection, H1, Span } from "../components";
 
-const FirstPage = ({ animate }) => {
+const FirstPage = () => {
 	return (
 		<FirstSection>
-			<H1 animateit={animate}>
+			<H1>
 				Hi <br /> <Span>Thank you for coming</Span> <br />{" "}
 				<Span>to my simplified portfolio website</Span>
 			</H1>
