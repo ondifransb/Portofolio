@@ -58,7 +58,7 @@ export const SecondSection = styled.section`
 	padding: 2rem;
 	z-index: 1;
 
-	background-color: red;
+	background-color: white;
 
 	display: ${(props) => (props.animateit ? "flex" : "none")};
 	flex-direction: row;
