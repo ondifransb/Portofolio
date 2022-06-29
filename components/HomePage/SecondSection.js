@@ -11,6 +11,7 @@ const SecondPage = ({ animate }) => {
 				src="/ProfilePict.jpeg"
 				width="300"
 				height="300"
+				alt="Profile Picture"
 			/>
 			<div className="firstdiv">
 				<span className="wkwkwk">ONDI FRANS BUTARBUTAR</span>
@@ -33,6 +34,7 @@ const SecondPage = ({ animate }) => {
 						href="https://ondifransb.github.io/portfolio/#/projects"
 						target="_blank"
 						rel="noopener noreferrer"
+						crossorigin="anonymous"
 					>
 						see more..
 					</a>
