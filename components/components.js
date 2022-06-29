@@ -9,6 +9,12 @@ export const MainContainer = styled.div`
 
 export const H1 = styled.h1`
 	font-size: clamp(1.7rem, -0.875rem + 8.333vw, 3.5rem);
+	color: black;
+	animation: ${(props) =>
+		props.animateit &&
+		css`
+			${animation1} 0.5s  ease-out forwards;
+		`};
 `;
 
 export const Span = styled.span`
@@ -52,6 +58,8 @@ export const SecondSection = styled.section`
 	padding: 2rem;
 	z-index: 1;
 
+	background-color: red;
+
 	display: ${(props) => (props.animateit ? "flex" : "none")};
 	flex-direction: row;
 	justify-content: center;
@@ -60,7 +68,7 @@ export const SecondSection = styled.section`
 	height: 100vh;
 	width: 100vw;
 
-	background-color: white;
+	/* background-color: white; */
 
 	position: absolute;
 	left: 50%;
@@ -69,7 +77,7 @@ export const SecondSection = styled.section`
 	animation: ${(props) =>
 		props.animateit &&
 		css`
-			${animation1} 1s ease-out forwards;
+			${animation2} 1s ease-out forwards;
 		`};
 
 	.Images {
@@ -128,6 +136,15 @@ export const SecondSection = styled.section`
 `;
 
 const animation1 = keyframes`
+0%{
+	color: black;
+}
+100%{
+	color: white;
+}
+`;
+
+const animation2 = keyframes`
 0%{
     width: 100%;
 	transform: translateX(50%);
