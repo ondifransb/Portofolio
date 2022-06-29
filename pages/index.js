@@ -17,7 +17,7 @@ export default function Home() {
 		let timer = setTimeout(() => {
 			setshow(true);
 		}, 3000);
-		console.log("i fire once");
+		alert("for the full experience, please use desktop");
 
 		return () => {
 			clearTimeout(timer);
