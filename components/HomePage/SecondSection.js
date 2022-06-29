@@ -34,7 +34,6 @@ const SecondPage = ({ animate }) => {
 						href="https://ondifransb.github.io/portfolio/#/projects"
 						target="_blank"
 						rel="noopener noreferrer"
-						crossOrigin="anonymous"
 					>
 						see more..
 					</a>
