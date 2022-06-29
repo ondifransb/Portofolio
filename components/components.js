@@ -1,12 +1,49 @@
 import styled, { keyframes, css } from "styled-components";
 
+export const MainContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: clamp(320px, 100vw, 1980px);
+`;
+
+export const H1 = styled.h1`
+	font-size: clamp(1.7rem, -0.875rem + 8.333vw, 3.5rem);
+`;
+
+export const Span = styled.span`
+	font-weight: lighter;
+`;
+
+export const Navbar = styled.nav`
+	background: #000;
+	color: #fff;
+	width: 100%;
+	position: fixed;
+
+	z-index: 2;
+
+	ul {
+		all: unset;
+		display: flex;
+		list-style: none;
+		/* background-color: blue; */
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	li {
+		margin: 10px 0px;
+	}
+`;
+
 export const FirstSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 `;
 
@@ -21,7 +58,7 @@ export const SecondSection = styled.section`
 	align-items: center;
 
 	height: 100vh;
-	width: 100%;
+	width: 100vw;
 
 	background-color: white;
 
@@ -34,6 +71,10 @@ export const SecondSection = styled.section`
 		css`
 			${animation1} 1s ease-out forwards;
 		`};
+
+	.Images {
+		border-radius: 50%;
+	}
 
 	div {
 		margin-left: 10px;
@@ -87,11 +128,11 @@ export const SecondSection = styled.section`
 `;
 
 const animation1 = keyframes`
-from{
+0%{
     width: 100%;
 	transform: translateX(50%);
 }
-to{
+100%{
     width: 100%;
 	transform: translateX(-50%);
 }

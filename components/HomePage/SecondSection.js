@@ -1,13 +1,12 @@
 import { SecondSection } from "../components";
 import Image from "next/image";
-import styles from "../../styles/Main.module.css";
 import Link from "next/link";
 
 const SecondPage = ({ animate }) => {
 	return (
 		<SecondSection animateit={animate}>
 			<Image
-				className={styles.Images}
+				className="Images"
 				src={"/static/ProfilePict.jpeg"}
 				width="300"
 				height="300"

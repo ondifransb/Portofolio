@@ -1,15 +1,15 @@
-import style from "../styles/nav.module.css"; //build-in
 import Link from "next/link";
+import { Navbar } from "./components";
 
 const Nav = () => {
 	return (
-		<nav className={style.nav}>
+		<Navbar>
 			<ul>
 				<li>
 					<Link href="/">Home</Link>
 				</li>
 			</ul>
-		</nav>
+		</Navbar>
 	);
 };
 

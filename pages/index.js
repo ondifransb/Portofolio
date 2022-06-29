@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/Main.module.css";
-import { FirstSection, SecondSection } from "../components/components";
+import {
+	FirstSection,
+	MainContainer,
+	SecondSection,
+} from "../components/components";
 import FirstPage from "../components/HomePage/FirstSection";
 import SecondPage from "../components/HomePage/SecondSection";
 
@@ -24,9 +27,9 @@ export default function Home() {
 
 	//VIEW
 	return (
-		<div className={styles.container}>
+		<MainContainer>
 			<FirstPage />
 			<SecondPage animate={show} />
-		</div>
+		</MainContainer>
 	);
 }

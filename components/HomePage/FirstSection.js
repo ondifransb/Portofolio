@@ -1,16 +1,12 @@
-import styles from "../../styles/Main.module.css";
-import { FirstSection } from "../components";
+import { FirstSection, H1, Span } from "../components";
 
 const FirstPage = () => {
 	return (
 		<FirstSection>
-			<h1 className={styles.welcometext}>
-				Hi <br /> <span className={styles.spantext}>Thank you for coming</span>{" "}
-				<br />{" "}
-				<span className={styles.spantext}>
-					to my simplified portfolio website
-				</span>
-			</h1>
+			<H1>
+				Hi <br /> <Span>Thank you for coming</Span> <br />{" "}
+				<Span>to my simplified portfolio website</Span>
+			</H1>
 		</FirstSection>
 	);
 };
