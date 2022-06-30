@@ -34,7 +34,7 @@ const SecondPage = ({ animate }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						see more..
+						⮞
 					</a>
 				</div>
 			</div>
