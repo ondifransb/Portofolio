@@ -92,7 +92,7 @@ export const SecondSection = styled.section`
 
 		.wkwkwk {
 			display: block;
-			font-size: clamp(1.7rem, -0.875rem + 8.333vw, 3.5rem);
+			font-size: clamp(1.8rem, -0.875rem + 8.333vw, 3.5rem);
 			font-weight: lighter;
 		}
 
