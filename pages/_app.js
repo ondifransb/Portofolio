@@ -1,36 +1,24 @@
-import { createGlobalStyle } from "styled-components";
+import Head from "next/head";
 import Nav from "../components/Nav";
-
-const GlobalStyle = createGlobalStyle`
-html,
-body {
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	margin: 0;
-	font-family: "Overpass", sans-serif;
-
-	overflow: hidden;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-`;
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<GlobalStyle />
-			{/* <Nav /> */}
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossOrigin="anonymous"
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&family=Overpass:ital@1&display=swap"
+					rel="stylesheet"
+				/>
+			</Head>
+
 			<Component {...pageProps} />
 		</>
 	);
