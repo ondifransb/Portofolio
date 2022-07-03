@@ -10,13 +10,16 @@ const MainPage = () => {
 			<ContentDiv>
 				{Data.map((e) => {
 					return (
-						<Card
-							src={e.src}
-							key={e.id}
-							layout="fixed"
-							width="400"
-							height="250"
-						/>
+						<div>
+							<Card
+								src={e.src}
+								key={e.id}
+								layout="fixed"
+								width="400"
+								height="250"
+							/>
+							<br />
+						</div>
 					);
 				})}
 			</ContentDiv>

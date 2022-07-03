@@ -41,12 +41,18 @@ export const Navbar = styled.nav`
 
 export const FirstSection = styled.section`
 	display: flex;
+
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
+
 	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
 
 	width: 100vw;
 	height: 100vh;
+
+	@media only screen and (max-width: 767px) {
+		height: fit-content;
+	}
 `;
 
 export const SecondSection = styled.section`
@@ -61,7 +67,6 @@ export const SecondSection = styled.section`
 	justify-content: center;
 	align-items: center;
 
-	height: 100vh;
 	width: 100vw;
 
 	/* background-color: white; */
@@ -80,7 +85,7 @@ export const SecondSection = styled.section`
 		border-radius: 50%;
 	}
 
-	div {
+	.firstdiv {
 		margin-left: 10px;
 		padding: 10px;
 		border-left: 2px solid black;
@@ -88,8 +93,6 @@ export const SecondSection = styled.section`
 
 		flex-wrap: wrap;
 		text-align: justify;
-
-		cursor: none;
 
 		.wkwkwk {
 			display: block;
@@ -108,6 +111,7 @@ export const SecondSection = styled.section`
 			height: 30%;
 			overflow-y: scroll;
 			width: 100%;
+			height: 250px;
 
 			border-left: none;
 			border-top: 2px solid black;
@@ -135,28 +139,18 @@ export const ContentDiv = styled.div`
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	align-items: center;
-	align-content: space-around;
+
 	width: clamp(320px, 100vw, 1980px);
-	height: 100vh;
 `;
 
 export const Card = styled(Image)`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: black;
-
 	transition: 0.3s ease-out;
-
 	border: none;
 
 	:hover {
 		cursor: pointer;
 		transform: scale(1.09);
 	}
-
-	color: red;
 `;
 
 const animation2 = keyframes`
