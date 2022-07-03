@@ -5,7 +5,7 @@ import Image from "next/image";
 const MainPage = () => {
 	const Data = Alldata;
 	return (
-		<FirstSection ai={"center"}>
+		<FirstSection ai={"center"} ht={"fit-content"}>
 			<H1>PROJECTS</H1>
 			<ContentDiv>
 				{Data.map((e) => {

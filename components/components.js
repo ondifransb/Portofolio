@@ -18,18 +18,26 @@ export const Span = styled.span`
 `;
 
 export const Navbar = styled.nav`
-	background: #000;
 	color: #fff;
-	width: 100%;
-	position: fixed;
+
+	width: clamp(55px, 2vw, 100px);
+	height clamp(55px, 2vw, 100px);
+	
+	border-radius: 50%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	z-index: 2;
+	position: fixed;
+	bottom: 0;
 
 	ul {
 		all: unset;
 		display: flex;
 		list-style: none;
-		/* background-color: blue; */
+		
 		justify-content: space-between;
 		align-items: flex-start;
 	}
@@ -44,15 +52,9 @@ export const FirstSection = styled.section`
 
 	flex-direction: column;
 	justify-content: space-evenly;
-
 	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
 
 	width: 100vw;
-	height: 100vh;
-
-	@media only screen and (max-width: 767px) {
-		height: fit-content;
-	}
 `;
 
 export const SecondSection = styled.section`
@@ -66,10 +68,6 @@ export const SecondSection = styled.section`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-
-	width: 100vw;
-
-	/* background-color: white; */
 
 	position: absolute;
 	left: 50%;

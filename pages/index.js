@@ -16,7 +16,7 @@ export default function Home() {
 	useEffect(() => {
 		let timer = setTimeout(() => {
 			setshow(true);
-		}, 3000);
+		}, 2000);
 		alert("for the full experience, please use desktop");
 
 		return () => {

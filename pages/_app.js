@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
 					rel="stylesheet"
 				/>
 			</Head>
-
+			<Nav />
 			<Component {...pageProps} />
 		</>
 	);
