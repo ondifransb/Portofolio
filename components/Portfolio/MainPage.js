@@ -12,7 +12,7 @@ const MainPage = () => {
 					return (
 						<Card
 							src={e.src}
-							id={e.id}
+							key={e.id}
 							layout="fixed"
 							width="400"
 							height="250"
