@@ -17,6 +17,7 @@ const MainPage = () => {
 								layout="fixed"
 								width="400"
 								height="250"
+								alt="Project Picture"
 							/>
 						</div>
 					);

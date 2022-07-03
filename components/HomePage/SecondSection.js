@@ -9,6 +9,7 @@ const SecondPage = ({ animate }) => {
 				className="Images"
 				src={"/static/ProfilePict.jpeg"}
 				width="300"
+				layout="fixed"
 				height="300"
 				alt="Profile Picture"
 			/>
