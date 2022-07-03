@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
+import Image from "next/image";
 
 export const MainContainer = styled.div`
 	display: flex;
@@ -42,7 +43,7 @@ export const FirstSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
 
 	width: 100vw;
 	height: 100vh;
@@ -128,6 +129,34 @@ export const SecondSection = styled.section`
 	@media only screen and (max-width: 767px) {
 		flex-direction: column;
 	}
+`;
+
+export const ContentDiv = styled.div`
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: space-around;
+	width: clamp(320px, 100vw, 1980px);
+	height: 100vh;
+`;
+
+export const Card = styled(Image)`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+
+	transition: 0.3s ease-out;
+
+	border: none;
+
+	:hover {
+		cursor: pointer;
+		transform: scale(1.09);
+	}
+
+	color: red;
 `;
 
 const animation2 = keyframes`

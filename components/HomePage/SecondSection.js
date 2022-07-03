@@ -29,13 +29,7 @@ const SecondPage = ({ animate }) => {
 					myself, my competence, my creativity, and my imagination.
 				</p>
 				<div className="portfolio">
-					<a
-						href="https://ondifransb.github.io/portfolio/#/projects"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						⮞
-					</a>
+					<Link href="/portfolio">⮞</Link>
 				</div>
 			</div>
 		</SecondSection>
