@@ -65,7 +65,8 @@ export const SecondSection = styled.section`
 	background-color: white;
 
 	display: ${(props) => (props.animateit ? "flex" : "none")};
-	flex-direction: row;
+	/* flex-direction: row; */
+	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 
