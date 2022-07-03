@@ -18,7 +18,6 @@ const MainPage = () => {
 								width="400"
 								height="250"
 							/>
-							<br key={e.id} />
 						</div>
 					);
 				})}

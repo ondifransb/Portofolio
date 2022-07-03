@@ -137,6 +137,7 @@ export const ContentDiv = styled.div`
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	gap: 20px;
 
 	width: clamp(320px, 100vw, 1980px);
 `;

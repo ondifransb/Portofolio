@@ -28,8 +28,9 @@ const SecondPage = ({ animate }) => {
 					<span>complete freedom</span> and also i want to <span>test</span>{" "}
 					myself, my competence, my creativity, and my imagination.
 				</p>
+				<br />
 				<div className="portfolio">
-					<Link href="/portfolio">⮞</Link>
+					<Link href="/portfolio">✈️</Link>
 				</div>
 			</div>
 		</SecondSection>
