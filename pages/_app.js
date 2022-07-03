@@ -16,11 +16,7 @@ function MyApp({ Component, pageProps }) {
 				<title>Obportfolio</title>
 
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin="anonymous"
-				/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&family=Overpass:ital@1&display=swap"
 					rel="stylesheet"
