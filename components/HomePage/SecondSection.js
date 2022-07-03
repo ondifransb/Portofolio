@@ -10,6 +10,7 @@ const SecondPage = ({ animate }) => {
 				src={"/static/ProfilePict.jpeg"}
 				width="300"
 				layout="fixed"
+				priority
 				height="300"
 				alt="Profile Picture"
 			/>
