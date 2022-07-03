@@ -10,7 +10,7 @@ const MainPage = () => {
 			<ContentDiv>
 				{Data.map((e) => {
 					return (
-						<div>
+						<div key={e.id}>
 							<Card
 								src={e.src}
 								key={e.id}
