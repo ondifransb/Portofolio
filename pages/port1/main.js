@@ -13,30 +13,33 @@ const Main = () => {
 	const [Change, setChange] = useState(false);
 	const [data, setdata] = useState(AvanaData);
 
-	const Changedata = () => {
-		setChange(!Change);
-		if (Change) {
-			setdata(AvanaData);
-		} else {
-			setdata(AvanaData2);
-		}
+	const LeftArrow = () => {
+		setChange(false);
+		setdata(AvanaData);
+
+		console.log(Change);
 	};
 
-	console.log(Change);
+	const RightArrow = () => {
+		setChange(true);
+		setdata(AvanaData2);
+
+		console.log(Change);
+	};
 
 	return (
 		<>
 			<div className="arrowdiv">
 				<span
 					onClick={() => {
-						Changedata();
+						LeftArrow();
 					}}
 				>
 					◀
 				</span>
 				<span
 					onClick={() => {
-						Changedata();
+						RightArrow();
 					}}
 				>
 					▶
@@ -44,7 +47,7 @@ const Main = () => {
 			</div>
 			<FirstSection>
 				<H1 mb="5px" ml="20px">
-					{Change ? "Ongoing Projects" : "Completed Projects"}
+					{Change ? "Completed Projects" : "Ongoing Projects"}
 				</H1>
 
 				<ContentDiv>

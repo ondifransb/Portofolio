@@ -13,6 +13,10 @@ export const H1 = styled.h1`
 	color: black;
 	margin-left: ${({ ml }) => (ml ? ml : "")};
 	margin-bottom: ${({ mb }) => (mb ? mb : "")};
+
+	@media only screen and (max-width: 767px) {
+		margin-left: 10px;
+	}
 `;
 
 export const Span = styled.span`
