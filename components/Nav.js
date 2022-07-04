@@ -6,7 +6,7 @@ const Nav = () => {
 		<Navbar>
 			<ul>
 				<li>
-					<Link href="/">🍀</Link>
+					<Link href="/">Λ</Link>
 				</li>
 			</ul>
 		</Navbar>

@@ -24,7 +24,9 @@ export const Span = styled.span`
 `;
 
 export const Navbar = styled.nav`
-	color: #fff;
+	color: black;
+	font-weight: bolder;
+	font-size: 2rem;
 
 	width: clamp(55px, 2vw, 100px);
 	height clamp(55px, 2vw, 100px);
