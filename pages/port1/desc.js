@@ -18,7 +18,7 @@ const Main = () => {
 					</span>
 				</h3>
 				<br />
-				<Link href="/port1/main">✈️</Link>
+				<Link href="/port1/main">Φ</Link>
 			</div>
 		</FirstSection>
 	);

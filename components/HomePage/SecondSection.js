@@ -34,7 +34,7 @@ const SecondPage = ({ animate }) => {
 				</p>
 				<br />
 				<div className="portfolio">
-					<Link href="/portfolio">✈️</Link>
+					<Link href="/portfolio">Φ</Link>
 				</div>
 			</div>
 		</SecondSection>
