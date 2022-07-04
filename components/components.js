@@ -11,6 +11,8 @@ export const MainContainer = styled.div`
 export const H1 = styled.h1`
 	font-size: clamp(1.7rem, -0.875rem + 8.333vw, 3.5rem);
 	color: black;
+	margin-left: ${({ ml }) => (ml ? ml : "")};
+	margin-bottom: ${({ mb }) => (mb ? mb : "")};
 `;
 
 export const Span = styled.span`
@@ -49,12 +51,39 @@ export const Navbar = styled.nav`
 
 export const FirstSection = styled.section`
 	display: flex;
-
 	flex-direction: column;
 	justify-content: space-evenly;
+
 	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
 
 	width: 100vw;
+	height: 100%;
+
+	.vidwrap {
+		-o-object-fit: cover;
+		object-fit: cover;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.Images {
+		filter: blur(3px);
+		transition: 0.2s ease-out;
+		:hover {
+			filter: blur(0px);
+			cursor: pointer;
+		}
+	}
+
+	.avdesc {
+		width: 95%;
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
 `;
 
 export const SecondSection = styled.section`
@@ -62,10 +91,12 @@ export const SecondSection = styled.section`
 	padding: 2rem;
 	z-index: 1;
 
+	width: 100vw;
+	height: 100%;
+
 	background-color: white;
 
 	display: ${(props) => (props.animateit ? "flex" : "none")};
-	/* flex-direction: row; */
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
@@ -137,6 +168,7 @@ export const SecondSection = styled.section`
 export const ContentDiv = styled.div`
 	display: flex;
 	justify-content: space-around;
+
 	flex-wrap: wrap;
 	gap: 20px;
 

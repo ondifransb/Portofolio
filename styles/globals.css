@@ -28,3 +28,22 @@ a {
 ::-webkit-scrollbar {
 	width: 0px;
 }
+
+.arrowdiv {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	position: fixed;
+	top: 50%;
+	transform: translateY(60%);
+	z-index: 3;
+}
+
+.arrowdiv span {
+	font-size: 1.5rem;
+}
+
+.arrowdiv :hover {
+	cursor: pointer;
+}
