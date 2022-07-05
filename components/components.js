@@ -62,8 +62,10 @@ export const FirstSection = styled.section`
 
 	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
 
+	background-color: ${({ bc }) => (bc ? bc : "transparent")};
+
 	width: 100vw;
-	height: 100%;
+	height: ${({ h }) => (h ? h : "100%")};
 
 	.vidwrap {
 		-o-object-fit: cover;
@@ -78,6 +80,13 @@ export const FirstSection = styled.section`
 		transition: 0.2s ease-out;
 		:hover {
 			filter: blur(0px);
+			cursor: pointer;
+		}
+	}
+
+	.NavImages {
+		transition: 0.2s ease-out;
+		:hover {
 			cursor: pointer;
 		}
 	}
@@ -188,6 +197,112 @@ export const Card = styled(Image)`
 	:hover {
 		cursor: pointer;
 		transform: scale(1.09);
+	}
+`;
+
+export const Nav = styled.nav`
+	width: 38%;
+	height: fit-content;
+	margin: ${({ m }) => (m ? m : "")};
+
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+
+	position: fixed;
+	top: 0;
+
+	font-family: "FiraSans-Light";
+
+	.linkdiv {
+		width: 70%;
+		display: flex;
+		justify-content: space-around;
+
+		span {
+			color: #9d9fa1;
+
+			transition: 0.2s ease-out;
+
+			:hover {
+				cursor: pointer;
+				.spann {
+					color: #303132;
+				}
+			}
+		}
+	}
+`;
+
+export const FooterC = styled.footer`
+	max-width: 55%;
+	height: fit-content;
+
+	margin: ${({ m }) => (m ? m : "")};
+
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed !important;
+	bottom: 0;
+
+	span {
+		height: 25px;
+
+		display: flex;
+		align-items: center;
+
+		font-size: 22px;
+		text-transform: capitalize;
+		padding: 0 10px;
+		letter-spacing: 0;
+		color: #9d9fa1;
+		border-right: 1px solid #9d9fa1;
+
+		:hover {
+			cursor: pointer;
+			color: white;
+		}
+	}
+`;
+
+export const Content = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 2rem;
+
+	.AMimages {
+		transform: perspective(1000px) rotateY(-15deg);
+	}
+
+	.desc {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+
+		.category {
+			font-size: 12px;
+			color: #5f5f5f;
+			font-weight: 300;
+		}
+		.title {
+			font-size: 22px;
+			font-weight: 400;
+			color: #444444;
+		}
+		.year {
+			font-size: 12px;
+			margin-bottom: 20px;
+			font-weight: 300;
+		}
+		.desc {
+			color: #444444;
+			width: 95%;
+			text-align: justify;
+			font-weight: lighter;
+		}
 	}
 `;
 

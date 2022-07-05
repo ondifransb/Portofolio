@@ -25,6 +25,17 @@ a {
 	padding: 0;
 }
 
+@font-face {
+	font-family: "FiraSans-Light";
+	src: url("/static/Fonts/FiraSans-Light.woff") format("woff");
+}
+@font-face {
+	font-family: "FiraSans-ExtraLight";
+	src: url("/static/Fonts/FiraSans-ExtraLight.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+}
+
 ::-webkit-scrollbar {
 	width: 0px;
 }
