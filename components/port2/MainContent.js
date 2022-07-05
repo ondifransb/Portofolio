@@ -12,20 +12,23 @@ const MainContent = () => {
 			{(data || []).map((e) => {
 				return Show == e.id ? (
 					<Content>
-						<div className="desc">
-							<span className="category">{e.category}</span>
-							<span className="title">{e.title}</span>
-							<span className="year">{e.year}</span>
-							<span className="desc">{e.desc}</span>
+						<div className="wrapper">
+							<div className="desc">
+								<span className="category">{e.category}</span>
+								<span className="title">{e.title}</span>
+								<span className="year">{e.year}</span>
+								<span className="description">{e.desc}</span>
+							</div>
+							<div className="img">
+								<Image
+									src={e.src}
+									key={e.id}
+									height="700"
+									width="700"
+									objectFit="contain"
+								/>
+							</div>
 						</div>
-						<Image
-							className="AMimages"
-							src={e.src}
-							key={e.id}
-							height="700"
-							width="700"
-							objectFit="contain"
-						/>
 					</Content>
 				) : (
 					<></>

@@ -232,11 +232,16 @@ export const Nav = styled.nav`
 			}
 		}
 	}
+
+	@media only screen and (max-width: 767px) {
+		background-color: red;
+		width: fit-content;
+	}
 `;
 
 export const FooterC = styled.footer`
-	max-width: 55%;
-	height: fit-content;
+	max-width: clamp(500px, 55%, 1000px);
+	max-height: 20vh;
 
 	margin: ${({ m }) => (m ? m : "")};
 
@@ -251,7 +256,7 @@ export const FooterC = styled.footer`
 		display: flex;
 		align-items: center;
 
-		font-size: 22px;
+		font-size: 1.375rem;
 		text-transform: capitalize;
 		padding: 0 10px;
 		letter-spacing: 0;
@@ -262,46 +267,81 @@ export const FooterC = styled.footer`
 			cursor: pointer;
 			color: white;
 		}
+
+		@media only screen and (max-width: 767px) {
+			font-size: 0.9rem;
+			height: 20px;
+		}
 	}
 `;
 
 export const Content = styled.div`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 	padding: 0 2rem;
 
-	.AMimages {
-		transform: perspective(1000px) rotateY(-15deg);
+	position: fixed;
+
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.desc {
+			width: 50%;
+			max-height: 50vh;
+			display: flex;
+			flex-direction: column;
+
+			order: 1;
+
+			.category {
+				font-size: 12px;
+				color: #5f5f5f;
+				font-weight: 300;
+			}
+			.title {
+				font-size: 22px;
+				font-weight: 400;
+				color: #444444;
+			}
+			.year {
+				font-size: 12px;
+				margin-bottom: 20px;
+				font-weight: 300;
+			}
+			.description {
+				color: #444444;
+				width: 95%;
+				height: 30vh;
+				overflow: scroll;
+				text-align: justify;
+				font-weight: lighter;
+			}
+		}
+
+		.img {
+			order: 2;
+			transform: perspective(1000px) rotateY(-15deg);
+		}
 	}
 
-	.desc {
-		width: 50%;
-		display: flex;
-		flex-direction: column;
+	@media only screen and (max-width: 767px) {
+		.wrapper {
+			flex-direction: column;
+			.desc {
+				width: fit-content;
+				max-height: 50vh;
+				order: 2;
+				.description {
+					overflow: scroll;
+				}
+			}
 
-		.category {
-			font-size: 12px;
-			color: #5f5f5f;
-			font-weight: 300;
-		}
-		.title {
-			font-size: 22px;
-			font-weight: 400;
-			color: #444444;
-		}
-		.year {
-			font-size: 12px;
-			margin-bottom: 20px;
-			font-weight: 300;
-		}
-		.desc {
-			color: #444444;
-			width: 95%;
-			text-align: justify;
-			font-weight: lighter;
+			.img {
+				order: 1;
+				transform: perspective(0px) rotateY(0deg);
+				height: clamp(300px, 20vh, 600px);
+			}
 		}
 	}
 `;
