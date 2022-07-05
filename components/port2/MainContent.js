@@ -26,6 +26,7 @@ const MainContent = () => {
 									height="700"
 									width="700"
 									objectFit="contain"
+									alt="project picture"
 								/>
 							</div>
 						</div>

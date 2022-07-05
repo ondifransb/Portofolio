@@ -12,8 +12,6 @@ class MyDocument extends Document {
 						content="web developer portfolio, programming, frontend-developer, frontend portfolio"
 					/>
 
-					<title>Obportfolio</title>
-
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
