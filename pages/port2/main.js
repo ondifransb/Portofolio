@@ -5,7 +5,10 @@ import { FirstSection, Nav } from "../../components/components";
 import Footer from "../../components/port2/Footer";
 import MainContent from "../../components/port2/MainContent";
 import Navbar from "../../components/port2/Navbar";
-import { ShowContext } from "./context";
+
+import { createContext } from "react";
+
+export const ShowContext = createContext({});
 
 const Main = () => {
 	const [Show, setShow] = useState();
