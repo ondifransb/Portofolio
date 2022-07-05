@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { ShowContext } from "../../pages/port2/context";
+import { ShowContext } from "../../pages/port2/main";
+
 import { FooterC } from "../components";
 
 const Footer = () => {

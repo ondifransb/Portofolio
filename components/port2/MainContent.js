@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import { AMData } from "../../models";
-import { ShowContext } from "../../pages/port2/context";
+import { ShowContext } from "../../pages/port2/main";
+
 import { Content } from "../components";
 
 const MainContent = () => {
