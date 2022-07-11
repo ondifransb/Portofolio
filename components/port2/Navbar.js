@@ -1,8 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Nav } from "../components";
 
 const Navbar = () => {
+	const [width, setwidth] = useState();
+
+	useEffect(() => {
+		const windoww = () => {
+			setwidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", windoww);
+
+		return () => {
+			window.removeEventListener("resize", windoww);
+		};
+	}, []);
+
+	console.log(width);
+
 	return (
 		<Nav m="1.4rem">
 			<Link href="/port2">
@@ -18,31 +35,43 @@ const Navbar = () => {
 				/>
 			</Link>
 			<div className="linkdiv">
-				<Link href="/port2">
-					<span>
-						<span className="spann">p</span>rojects
-					</span>
-				</Link>
-				<Link href="/port2">
-					<span>
-						<span className="spann">j</span>ournal
-					</span>
-				</Link>
-				<Link href="/port2">
-					<span>
-						<span className="spann">a</span>bout
-					</span>
-				</Link>
-				<Link href="/port2">
-					<span>
-						<span className="spann">c</span>ontact
-					</span>
-				</Link>
-				<Link href="/port2">
-					<span>
-						<span className="spann">s</span>earch
-					</span>
-				</Link>
+				{width >= 767 ? (
+					<>
+						<Link href="/port2">
+							<span>
+								<span className="spann">p</span>rojects
+							</span>
+						</Link>
+						<Link href="/port2">
+							<span>
+								<span className="spann">j</span>ournal
+							</span>
+						</Link>
+						<Link href="/port2">
+							<span>
+								<span className="spann">a</span>bout
+							</span>
+						</Link>
+						<Link href="/port2">
+							<span>
+								<span className="spann">c</span>ontact
+							</span>
+						</Link>
+						<Link href="/port2">
+							<span>
+								<span className="spann">s</span>earch
+							</span>
+						</Link>
+					</>
+				) : (
+					<>
+						<div className="hamburger">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</>
+				)}
 			</div>
 		</Nav>
 	);

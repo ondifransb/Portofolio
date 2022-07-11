@@ -206,6 +206,7 @@ export const Nav = styled.nav`
 	margin: ${({ m }) => (m ? m : "")};
 
 	display: flex;
+	flex-direction: row;
 	align-items: baseline;
 	justify-content: space-between;
 
@@ -215,7 +216,7 @@ export const Nav = styled.nav`
 	font-family: "FiraSans-Light";
 
 	.linkdiv {
-		width: 70%;
+		width: 90%;
 		display: flex;
 		justify-content: space-around;
 
@@ -234,8 +235,29 @@ export const Nav = styled.nav`
 	}
 
 	@media only screen and (max-width: 767px) {
-		background-color: red;
-		width: fit-content;
+		width: 90%;
+
+		.linkdiv {
+			display: block;
+			.hamburger {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				width: 20px;
+				height: 20px;
+				float: right;
+				:hover {
+					cursor: pointer;
+				}
+
+				div {
+					width: 100%;
+					height: 10%;
+					border-radius: 5px;
+					background-color: black;
+				}
+			}
+		}
 	}
 `;
 
