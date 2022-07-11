@@ -201,7 +201,7 @@ export const Card = styled(Image)`
 `;
 
 export const Nav = styled.nav`
-	width: 38%;
+	width: clamp(300px, 38%, 700px);
 	height: fit-content;
 	margin: ${({ m }) => (m ? m : "")};
 
@@ -348,6 +348,8 @@ export const Content = styled.div`
 	}
 
 	@media only screen and (max-width: 767px) {
+		top: 43%;
+		transform: translateY(-50%);
 		.wrapper {
 			flex-direction: column;
 			.desc {

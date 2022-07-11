@@ -18,8 +18,6 @@ const Navbar = () => {
 		};
 	}, []);
 
-	console.log(width);
-
 	return (
 		<Nav m="1.4rem">
 			<Link href="/port2">
