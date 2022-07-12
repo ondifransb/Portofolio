@@ -27,9 +27,9 @@ export default function Home() {
 
 	//VIEW
 	return (
-		<MainContainer>
+		<>
 			<FirstPage />
 			<SecondPage animate={show} />
-		</MainContainer>
+		</>
 	);
 }

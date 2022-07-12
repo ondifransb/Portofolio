@@ -4,7 +4,7 @@ import { FirstSection } from "../../components/components";
 
 const Index = () => {
 	return (
-		<FirstSection ai="center">
+		<FirstSection ai="center" jc="center">
 			<div className="vidwrap">
 				<video autoPlay muted loop height="100%">
 					<source src={"/static/file.mp4"} type="video/mp4" />

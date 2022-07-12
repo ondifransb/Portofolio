@@ -6,6 +6,7 @@ import {
 	FirstSection,
 	H1,
 	SecondSection,
+	MainContainer,
 } from "../../components/components";
 import { AvanaData, AvanaData2 } from "../../models";
 
@@ -28,9 +29,10 @@ const Main = () => {
 	};
 
 	return (
-		<>
+		<MainContainer>
 			<div className="arrowdiv">
 				<span
+					className="leftarrow"
 					onClick={() => {
 						LeftArrow();
 					}}
@@ -38,6 +40,7 @@ const Main = () => {
 					◀
 				</span>
 				<span
+					className="rightarrow"
 					onClick={() => {
 						RightArrow();
 					}}
@@ -46,9 +49,7 @@ const Main = () => {
 				</span>
 			</div>
 			<FirstSection>
-				<H1 mb="5px" ml="20px">
-					{Change ? "Completed Projects" : "Ongoing Projects"}
-				</H1>
+				<H1 ml="20px">{Change ? "Completed Projects" : "Ongoing Projects"}</H1>
 
 				<ContentDiv>
 					{(data || []).map((e) => {
@@ -66,7 +67,7 @@ const Main = () => {
 					})}
 				</ContentDiv>
 			</FirstSection>
-		</>
+		</MainContainer>
 	);
 };
 

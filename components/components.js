@@ -5,7 +5,23 @@ export const MainContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	width: clamp(320px, 100vw, 1980px);
+	min-height: 100vh;
+	overflow-y: scroll;
+
+	.arrowdiv {
+		display: flex;
+		background-color: transparent;
+		.leftarrow {
+			margin-right: auto;
+			float: left;
+		}
+		.rightarrow {
+			margin-left: auto;
+			float: right;
+		}
+	}
 `;
 
 export const H1 = styled.h1`
@@ -58,14 +74,14 @@ export const Navbar = styled.nav`
 export const FirstSection = styled.section`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
 
 	align-items: ${({ ai }) => (ai ? ai : "flex-start")};
+	justify-content: ${({ jc }) => (jc ? jc : "space-evenly")};
 
 	background-color: ${({ bc }) => (bc ? bc : "transparent")};
 
+	height: ${({ ht }) => (ht ? ht : "")};
 	width: 100vw;
-	height: ${({ h }) => (h ? h : "100%")};
 
 	.vidwrap {
 		-o-object-fit: cover;
@@ -107,7 +123,6 @@ export const SecondSection = styled.section`
 	z-index: 1;
 
 	width: 100vw;
-	height: 100%;
 
 	background-color: white;
 
@@ -123,7 +138,7 @@ export const SecondSection = styled.section`
 	animation: ${(props) =>
 		props.animateit &&
 		css`
-			${animation2} 1s ease-out forwards;
+			${animation1} 1s ease-out forwards;
 		`};
 
 	.Images {
@@ -370,7 +385,7 @@ export const Content = styled.div`
 	}
 `;
 
-const animation2 = keyframes`
+const animation1 = keyframes`
 0%{
     width: 100%;
 	transform: translateX(50%);

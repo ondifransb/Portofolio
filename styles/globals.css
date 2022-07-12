@@ -1,12 +1,8 @@
 html,
 body {
 	display: flex;
-
 	justify-content: center;
 	align-items: center;
-	max-height: 100vh;
-	overflow-y: scroll;
-	overflow-x: hidden;
 
 	padding: 0;
 	margin: 0;

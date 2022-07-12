@@ -33,7 +33,7 @@ const Navbar = () => {
 				/>
 			</Link>
 			<div className="linkdiv">
-				{width >= 767 ? (
+				{width > 767 ? (
 					<>
 						<Link href="/port2">
 							<span>

@@ -2,7 +2,7 @@ import { FirstSection, H1, Span } from "../components";
 
 const FirstPage = () => {
 	return (
-		<FirstSection>
+		<FirstSection jc={"center"}>
 			<H1>
 				Hi <br /> <Span>Thank you for coming</Span> <br />{" "}
 				<Span>to my simplified portfolio website</Span>
