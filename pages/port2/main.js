@@ -12,9 +12,10 @@ export const ShowContext = createContext({});
 
 const Main = () => {
 	const [Show, setShow] = useState();
+	const [navVal, setnavVal] = useState();
 
 	return (
-		<ShowContext.Provider value={{ Show, setShow }}>
+		<ShowContext.Provider value={{ Show, setShow, navVal, setnavVal }}>
 			<FirstSection style={{ backgroundColor: "#4444", height: "100vh" }}>
 				<Navbar />
 				<MainContent />

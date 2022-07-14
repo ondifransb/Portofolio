@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
 
 	width: clamp(320px, 100vw, 1980px);
 	min-height: 100vh;
-	overflow-y: scroll;
+	overflow: hidden;
 
 	.arrowdiv {
 		display: flex;
@@ -232,6 +232,7 @@ export const Nav = styled.nav`
 
 	.linkdiv {
 		width: 90%;
+
 		display: flex;
 		justify-content: space-around;
 
@@ -315,20 +316,18 @@ export const FooterC = styled.footer`
 export const Content = styled.div`
 	padding: 0 2rem;
 
-	position: fixed;
+	height: ${({ ht }) => (ht ? ht : "fit-content")};
 
 	.wrapper {
 		width: 100%;
-		height: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+
 		.desc {
 			width: 50%;
-			max-height: 50vh;
 			display: flex;
 			flex-direction: column;
-
 			order: 1;
 
 			.category {
@@ -357,29 +356,61 @@ export const Content = styled.div`
 		}
 
 		.img {
+			height: min-content;
 			order: 2;
 			transform: perspective(1000px) rotateY(-15deg);
 		}
 	}
 
+	.ulwrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		li {
+			color: #9d9fa1;
+			transition: 0.3s ease-out;
+			:hover {
+				cursor: pointer;
+				transform: translateX(20px);
+			}
+		}
+	}
+
 	@media only screen and (max-width: 767px) {
-		top: 43%;
-		transform: translateY(-50%);
+		position: absolute;
+		top: -10%;
+		transform: translateY(15%);
+		overflow-y: hidden;
+		height: clamp(300px, 90vh, 1000px);
+
 		.wrapper {
 			flex-direction: column;
+
 			.desc {
 				width: fit-content;
-				max-height: 50vh;
+				height: 70vh;
+
 				order: 2;
+
+				.category {
+					background-color: transparent;
+				}
+				.title {
+					background-color: transparent;
+				}
+				.year {
+					background-color: transparent;
+				}
 				.description {
-					overflow: scroll;
+					width: 100%;
+					height: 50%;
 				}
 			}
-
 			.img {
 				order: 1;
 				transform: perspective(0px) rotateY(0deg);
-				height: clamp(300px, 20vh, 600px);
 			}
 		}
 	}

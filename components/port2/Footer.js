@@ -4,9 +4,14 @@ import { ShowContext } from "../../pages/port2/main";
 import { FooterC } from "../components";
 
 const Footer = () => {
-	const { Show, setShow } = useContext(ShowContext);
+	const { setShow, setnavVal } = useContext(ShowContext);
 	return (
-		<FooterC m="1.4rem">
+		<FooterC
+			m="1.4rem"
+			onMouseEnter={() => {
+				setnavVal(0);
+			}}
+		>
 			<span onMouseEnter={() => setShow(1)}>Potato Head Beach Club </span>
 			<span onMouseEnter={() => setShow(2)}>Katamama </span>
 			<span onMouseEnter={() => setShow(3)}>Blimbing Sari Airport </span>

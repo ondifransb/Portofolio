@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ShowContext } from "../../pages/port2/main";
 import { Nav } from "../components";
 
 const Navbar = () => {
 	const [width, setwidth] = useState();
+	const [close, setclose] = useState(false);
+	const { setnavVal } = useContext(ShowContext);
 
 	useEffect(() => {
 		const windoww = () => {
@@ -16,7 +19,7 @@ const Navbar = () => {
 		return () => {
 			window.removeEventListener("resize", windoww);
 		};
-	}, []);
+	});
 
 	return (
 		<Nav m="1.4rem">
@@ -33,40 +36,43 @@ const Navbar = () => {
 				/>
 			</Link>
 			<div className="linkdiv">
-				{width > 767 ? (
+				{width > 414 ? (
 					<>
-						<Link href="/port2">
-							<span>
-								<span className="spann">p</span>rojects
-							</span>
-						</Link>
-						<Link href="/port2">
-							<span>
-								<span className="spann">j</span>ournal
-							</span>
-						</Link>
-						<Link href="/port2">
-							<span>
-								<span className="spann">a</span>bout
-							</span>
-						</Link>
-						<Link href="/port2">
-							<span>
-								<span className="spann">c</span>ontact
-							</span>
-						</Link>
-						<Link href="/port2">
-							<span>
-								<span className="spann">s</span>earch
-							</span>
-						</Link>
+						<span onMouseEnter={() => setnavVal(1)}>
+							<span className="spann">p</span>rojects
+						</span>
+
+						<span onMouseEnter={() => setnavVal(2)}>
+							<span className="spann">j</span>ournal
+						</span>
+
+						<span onMouseEnter={() => setnavVal(3)}>
+							<span className="spann">a</span>bout
+						</span>
+
+						<span onMouseEnter={() => setnavVal(4)}>
+							<span className="spann">c</span>ontact
+						</span>
+
+						<span>
+							<span className="spann">s</span>earch
+						</span>
 					</>
 				) : (
 					<>
-						<div className="hamburger">
-							<div></div>
-							<div></div>
-							<div></div>
+						<div className="hamburger" onClick={() => setclose(!close)}>
+							{close ? (
+								<>
+									<div></div>
+									<div></div>
+									<div></div>
+								</>
+							) : (
+								<>
+									<div></div>
+									<div></div>
+								</>
+							)}
 						</div>
 					</>
 				)}

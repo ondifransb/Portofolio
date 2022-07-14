@@ -137,3 +137,18 @@ export const AMData = [
 		desc: "Before residing in this house, the clients of the I&L Residence moved away from a high-rise apartment, with the hopes of living somewhere more grounded and natural. That is why almost all of the palm trees found within the site has inspired the house that was built within the site. The residence was built as if it was a stage house, with columns standing and supporting the blocks of the house. The columns were made out of concrete, naturally exposed and round in its shape, in order to follow through the nature of the palm trees. With the intention to preserve the condition of the site as it is, the trees punctured through some of the interior spaces of the house. This gives more of a natural feel within the interior, bringing the outdoors inside.",
 	},
 ];
+
+export const projectData = [
+	{ cat: "living" },
+	{ cat: "culture" },
+	{ cat: "office" },
+	{ cat: "retail" },
+	{ cat: "education" },
+	{ cat: "hospitality & leisure" },
+	{ cat: "transportation" },
+	{ cat: "religious space" },
+	{ cat: "interior" },
+	{ cat: "landscape" },
+];
+
+export const journalData = [{ cat: "event" }, { cat: "news" }];
