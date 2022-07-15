@@ -18,7 +18,7 @@ const MainContent = () => {
 			return Show == e.id && navVal == 0 ? (
 				<Content key={e.id}>
 					<div className="wrapper">
-						<div className="desc">
+						<div className="desc" key={e.id}>
 							<span className="category">{e.category}</span>
 							<span className="title">{e.title}</span>
 							<span className="year">{e.year}</span>

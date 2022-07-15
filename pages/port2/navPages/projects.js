@@ -6,7 +6,7 @@ const Projects = () => {
 		<Content ht={"50%"}>
 			<ul className="ulwrapper">
 				{(projectData || []).map((e) => {
-					return <li>{e.cat}</li>;
+					return <li key={e.id}>{e.cat}</li>;
 				})}
 			</ul>
 		</Content>

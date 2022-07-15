@@ -139,16 +139,19 @@ export const AMData = [
 ];
 
 export const projectData = [
-	{ cat: "living" },
-	{ cat: "culture" },
-	{ cat: "office" },
-	{ cat: "retail" },
-	{ cat: "education" },
-	{ cat: "hospitality & leisure" },
-	{ cat: "transportation" },
-	{ cat: "religious space" },
-	{ cat: "interior" },
-	{ cat: "landscape" },
+	{ cat: "living", id: 1 },
+	{ cat: "culture", id: 2 },
+	{ cat: "office", id: 3 },
+	{ cat: "retail", id: 4 },
+	{ cat: "education", id: 5 },
+	{ cat: "hospitality & leisure", id: 6 },
+	{ cat: "transportation", id: 7 },
+	{ cat: "religious space", id: 8 },
+	{ cat: "interior", id: 9 },
+	{ cat: "landscape", id: 10 },
 ];
 
-export const journalData = [{ cat: "event" }, { cat: "news" }];
+export const journalData = [
+	{ cat: "event", id: 1 },
+	{ cat: "news", id: 2 },
+];
