@@ -16,7 +16,7 @@ const Main = () => {
 
 	return (
 		<ShowContext.Provider value={{ Show, setShow, navVal, setnavVal }}>
-			<FirstSection style={{ backgroundColor: "#4444", height: "100vh" }}>
+			<FirstSection bc="#4444" ps="fixed" ht="100vh" tp="0%">
 				<Navbar />
 				<MainContent />
 				<Footer />

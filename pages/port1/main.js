@@ -6,7 +6,6 @@ import {
 	FirstSection,
 	H1,
 	SecondSection,
-	MainContainer,
 } from "../../components/components";
 import { AvanaData, AvanaData2 } from "../../models";
 
@@ -29,7 +28,7 @@ const Main = () => {
 	};
 
 	return (
-		<MainContainer>
+		<>
 			<div className="arrowdiv">
 				<span
 					className="leftarrow"
@@ -67,7 +66,7 @@ const Main = () => {
 					})}
 				</ContentDiv>
 			</FirstSection>
-		</MainContainer>
+		</>
 	);
 };
 

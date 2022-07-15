@@ -24,10 +24,8 @@ class MyDocument extends Document {
 					/>
 				</Head>
 				<body>
-					<MainContainer>
-						<Main />
-						<NextScript />
-					</MainContainer>
+					<Main />
+					<NextScript />
 				</body>
 			</Html>
 		);

@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-	FirstSection,
-	MainContainer,
-	SecondSection,
-} from "../components/components";
+import { FirstSection, SecondSection } from "../components/components";
 import FirstPage from "../components/HomePage/FirstSection";
 import SecondPage from "../components/HomePage/SecondSection";
 
@@ -28,7 +24,7 @@ export default function Home() {
 	//VIEW
 	return (
 		<>
-			<FirstPage />
+			{show ? null : <FirstPage />}
 			<SecondPage animate={show} />
 		</>
 	);

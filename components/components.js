@@ -6,9 +6,10 @@ export const MainContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 
+	overflow-y: hidden;
+
 	width: clamp(320px, 100vw, 1980px);
-	min-height: 100vh;
-	overflow: hidden;
+	height: 100%;
 
 	.arrowdiv {
 		display: flex;
@@ -79,8 +80,10 @@ export const FirstSection = styled.section`
 	justify-content: ${({ jc }) => (jc ? jc : "space-evenly")};
 
 	background-color: ${({ bc }) => (bc ? bc : "transparent")};
+	position: ${({ ps }) => (ps ? ps : "")};
+	top: ${({ tp }) => (tp ? tp : "")};
 
-	height: ${({ ht }) => (ht ? ht : "")};
+	min-height: ${({ ht }) => (ht ? ht : "fit-content")};
 	width: 100vw;
 
 	.vidwrap {
@@ -131,9 +134,7 @@ export const SecondSection = styled.section`
 	justify-content: center;
 	align-items: center;
 
-	position: absolute;
-	left: 50%;
-	transform: translateX(50%);
+	transform: translateX(100%);
 
 	animation: ${(props) =>
 		props.animateit &&
@@ -379,11 +380,9 @@ export const Content = styled.div`
 	}
 
 	@media only screen and (max-width: 767px) {
-		position: absolute;
-		top: -10%;
-		transform: translateY(15%);
-		overflow-y: hidden;
-		height: clamp(300px, 90vh, 1000px);
+		position: fixed;
+		height: clamp(300px, 80%, 1000px);
+		overflow-y: scroll;
 
 		.wrapper {
 			flex-direction: column;
@@ -419,10 +418,10 @@ export const Content = styled.div`
 const animation1 = keyframes`
 0%{
     width: 100%;
-	transform: translateX(50%);
+	transform: translateX(100%);
 }
 100%{
     width: 100%;
-	transform: translateX(-50%);
+	transform: translateX(0%);
 }
 `;

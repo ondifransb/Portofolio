@@ -5,7 +5,7 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<MainContainer>
+		<>
 			<Head>
 				<title>Obportfolio</title>
 				<meta
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 			<Nav />
 			<Component {...pageProps} />
-		</MainContainer>
+		</>
 	);
 }
 
