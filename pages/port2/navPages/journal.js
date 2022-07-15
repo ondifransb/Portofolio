@@ -6,7 +6,7 @@ const Journal = () => {
 		<Content ht={"8%"}>
 			<ul className="ulwrapper">
 				{(journalData || []).map((e) => {
-					return <li>{e.cat}</li>;
+					return <li key={e.id}>{e.cat}</li>;
 				})}
 			</ul>
 		</Content>
