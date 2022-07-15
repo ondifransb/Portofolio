@@ -73,7 +73,7 @@ const MainContent = () => {
 		if (navVal === 0) {
 			return renderit2();
 		}
-		if (navVal == true) {
+		if (navVal == true || close == true) {
 			return <BigScreen />;
 		}
 	};

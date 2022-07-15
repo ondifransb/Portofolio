@@ -11,23 +11,35 @@ export const BigScreen = () => {
 
 	return (
 		<>
-			<span onMouseEnter={() => change(1)}>
+			<span
+				style={{ color: "#9d9fa1", margin: "1rem" }}
+				onMouseEnter={() => change(1)}
+			>
 				<span className="spann">p</span>rojects
 			</span>
 
-			<span onMouseEnter={() => change(2)}>
+			<span
+				style={{ color: "#9d9fa1", margin: "1rem" }}
+				onMouseEnter={() => change(2)}
+			>
 				<span className="spann">j</span>ournal
 			</span>
 
-			<span onMouseEnter={() => change(3)}>
+			<span
+				style={{ color: "#9d9fa1", margin: "1rem" }}
+				onMouseEnter={() => change(3)}
+			>
 				<span className="spann">a</span>bout
 			</span>
 
-			<span onMouseEnter={() => change(4)}>
+			<span
+				style={{ color: "#9d9fa1", margin: "1rem" }}
+				onMouseEnter={() => change(4)}
+			>
 				<span className="spann">c</span>ontact
 			</span>
 
-			<span>
+			<span style={{ color: "#9d9fa1", margin: "1rem" }}>
 				<span className="spann">s</span>earch
 			</span>
 		</>
@@ -43,7 +55,7 @@ export const LilScreen = () => {
 	return (
 		<>
 			<div className="hamburger" onClick={changeState}>
-				{close ? (
+				{close && navVal ? (
 					<>
 						<div></div>
 						<div></div>
