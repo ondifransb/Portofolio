@@ -220,6 +220,7 @@ export const Nav = styled.nav`
 	width: clamp(300px, 38%, 700px);
 	height: fit-content;
 	margin: ${({ m }) => (m ? m : "")};
+	z-index: 3;
 
 	display: flex;
 	flex-direction: row;
@@ -281,6 +282,7 @@ export const Nav = styled.nav`
 export const FooterC = styled.footer`
 	max-width: clamp(500px, 55%, 1000px);
 	max-height: 20vh;
+	z-index: 3;
 
 	margin: ${({ m }) => (m ? m : "")};
 
@@ -295,7 +297,8 @@ export const FooterC = styled.footer`
 		display: flex;
 		align-items: center;
 
-		font-size: 1.375rem;
+		font-size: clamp(10px, 1.375rem, 1.375rem);
+		line-height: 0;
 		text-transform: capitalize;
 		padding: 0 10px;
 		letter-spacing: 0;
@@ -381,8 +384,10 @@ export const Content = styled.div`
 
 	@media only screen and (max-width: 767px) {
 		position: fixed;
-		height: clamp(300px, 80%, 1000px);
-		overflow-y: scroll;
+		/* height: clamp(300px, 80%, 1000px); */
+		height: ${({ ht }) => (ht ? ht : "clamp(300px, 80%, 1000px)")};
+		overflow-y: hidden;
+		transform: translateY(-10%);
 
 		.wrapper {
 			flex-direction: column;

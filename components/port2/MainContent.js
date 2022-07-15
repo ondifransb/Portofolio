@@ -8,10 +8,11 @@ import Project from "../..//pages/port2/navPages/projects";
 import Journal from "../..//pages/port2/navPages/journal";
 import About from "../..//pages/port2/navPages/about";
 import Contact from "../..//pages/port2/navPages/contact";
+import { BigScreen } from "./bigNav";
 
 const MainContent = () => {
 	const data = AMData;
-	const { Show, navVal } = useContext(ShowContext);
+	const { Show, navVal, close } = useContext(ShowContext);
 
 	const renderit2 = () => {
 		return (data || []).map((e) => {
@@ -45,20 +46,35 @@ const MainContent = () => {
 	};
 
 	const renderit = () => {
-		if (navVal == 1) {
+		if (navVal === 1 && close == false) {
 			return <Project />;
 		}
-		if (navVal == 2) {
+		if (navVal === 1 && close == true) {
+			return <Project />;
+		}
+		if (navVal === 2 && close == false) {
 			return <Journal />;
 		}
-		if (navVal == 3) {
+		if (navVal === 2 && close == true) {
+			return <Journal />;
+		}
+		if (navVal === 3 && close == false) {
 			return <About />;
 		}
-		if (navVal == 4) {
+		if (navVal === 3 && close == true) {
+			return <About />;
+		}
+		if (navVal === 4 && close == false) {
 			return <Contact />;
 		}
-		if (navVal == 0) {
+		if (navVal === 4 && close == true) {
+			return <Contact />;
+		}
+		if (navVal === 0) {
 			return renderit2();
+		}
+		if (navVal == true) {
+			return <BigScreen />;
 		}
 	};
 

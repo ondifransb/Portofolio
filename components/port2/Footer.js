@@ -7,7 +7,7 @@ const Footer = () => {
 	const { setShow, setnavVal } = useContext(ShowContext);
 	return (
 		<FooterC
-			m="1.4rem"
+			m="1rem"
 			onMouseEnter={() => {
 				setnavVal(0);
 			}}
