@@ -35,7 +35,7 @@ const Main = () => {
 		<ShowContext.Provider
 			value={{ Show, setShow, navVal, setnavVal, close, setclose, width }}
 		>
-			<FirstSection jc="center" bc="#4444" ps="fixed" ht="100vh" tp="0%">
+			<FirstSection jc="center" bc="#4444" ht="100vh" tp="0%">
 				<Navbar />
 				<MainContent />
 				<Footer />

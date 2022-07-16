@@ -183,6 +183,9 @@ export const SecondSection = styled.section`
 			::-webkit-scrollbar {
 				width: 0px;
 			}
+			::-moz-scrollbar {
+				width: 0px;
+			}
 		}
 	}
 
@@ -222,15 +225,13 @@ export const Nav = styled.nav`
 	margin: ${({ m }) => (m ? m : "")};
 	z-index: 3;
 
-	background-color: red;
-
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
 	justify-content: space-between;
 
-	position: fixed;
-	top: 0;
+	/* position: fixed;
+	top: 0; */
 
 	font-family: "FiraSans-Light";
 
@@ -294,8 +295,7 @@ export const FooterC = styled.footer`
 
 	display: flex;
 	flex-wrap: wrap;
-	position: fixed !important;
-	bottom: 0;
+	flex-shrink: 0;
 
 	span {
 		height: 25px;
@@ -325,6 +325,7 @@ export const FooterC = styled.footer`
 
 export const Content = styled.div`
 	padding: 0 2rem;
+	width: 100vw;
 
 	height: ${({ ht }) => (ht ? ht : "fit-content")};
 
@@ -411,24 +412,18 @@ export const Content = styled.div`
 		display: ${({ dp }) => (dp ? dp : "")};
 		flex-direction: ${({ fd }) => (fd ? fd : "")};;
 		position: fixed;
-		height: ${({ ht }) => (ht ? ht : "clamp(350px, 82%, 1000px)")};
-		transform: translateY(${({ ty }) => (ty ? ty : "")});
-
-		
-		
+		/* height: ${({ ht }) => (ht ? ht : "clamp(350px, 82%, 1000px)")}; */
+		/* transform: translateY(${({ ty }) => (ty ? ty : "")}); */	
 
 		.wrapper {
 			flex-direction: column;
 			align-items: flex-start;
-			overflow-y: scroll;
+			/* overflow-y: scroll; */
 
 			.desc {
 				width: fit-content;
-				height: 50%;
 				order: 2;
-				transform: translateY(-15%);
-
-				
+				transform: translateY(-10%);
 
 				.category {
 					background-color: transparent;
@@ -442,12 +437,10 @@ export const Content = styled.div`
 				.description {
 					width: 100%;
 					overflow-y: scroll;
-
-					
 				}
 			}
 			.img {
-				height: 50%;
+				height: 50% !important;
 				order: 1;
 				transform: perspective(0px) rotateY(0deg);
 			}

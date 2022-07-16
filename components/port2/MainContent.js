@@ -18,7 +18,7 @@ const MainContent = () => {
 	const renderit2 = () => {
 		return (data || []).map((e) => {
 			return Show == e.id && navVal == 0 ? (
-				<Content key={e.id} ty={width <= 414 ? "-12%" : "0"}>
+				<Content key={e.id}>
 					<div className="wrapper">
 						<div className="desc" key={e.id}>
 							<span className="category">{e.category}</span>
@@ -79,7 +79,20 @@ const MainContent = () => {
 		}
 	};
 
-	return <>{renderit()}</>;
+	return (
+		<div
+			style={{
+				display: "flex",
+				flex: "1 1 auto",
+				alignItems: "center",
+				background: "red",
+				height: "50vh",
+				overflow: "scroll",
+			}}
+		>
+			{renderit()}
+		</div>
+	);
 };
 
 export default MainContent;

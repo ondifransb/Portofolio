@@ -4,6 +4,8 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 
+	position: relative;
+
 	overflow-y: scroll;
 	overflow-x: hidden;
 
@@ -36,6 +38,10 @@ a {
 }
 
 ::-webkit-scrollbar {
+	width: 0px;
+}
+
+::-moz-scrollbar {
 	width: 0px;
 }
 
