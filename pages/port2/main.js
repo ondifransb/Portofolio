@@ -15,7 +15,7 @@ const Main = () => {
 	const [navVal, setnavVal] = useState(false);
 	const [close, setclose] = useState(false);
 
-	const [width, setwidth] = useState(416);
+	const [width, setwidth] = useState();
 
 	useEffect(() => {
 		const windoww = () => {

@@ -11,12 +11,14 @@ export const Navbar = () => {
 	return (
 		<Nav m="1rem">
 			<Link href="/port2">
+				{/* somehow i found out how to centering Nextjs image  */}
 				<Image
 					className="NavImages"
 					src="/static/Andra Matin/logo-white.svg"
 					width="130"
-					layout="fixed"
-					objectFit="cover"
+					layout="intrinsic"
+					objectFit={width > 414 ? "contain" : "cover"}
+					objectPosition="50% 50%"
 					priority
 					height="20"
 					alt="Profile Picture"

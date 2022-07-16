@@ -40,7 +40,21 @@ export const BigScreen = () => {
 			</span>
 
 			<span style={{ color: "#9d9fa1", margin: "1rem" }}>
-				<span className="spann">s</span>earch
+				<textarea
+					placeholder="search"
+					style={{
+						fontSize: "1rem",
+						outline: "none",
+						resize: "none",
+						border: "none",
+						fontFamily: "FiraSans-Light",
+						background: "transparent",
+
+						display: "block",
+						width: "max-content",
+						height: "16px",
+					}}
+				/>
 			</span>
 		</>
 	);

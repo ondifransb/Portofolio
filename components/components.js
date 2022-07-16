@@ -217,20 +217,24 @@ export const Card = styled(Image)`
 `;
 
 export const Nav = styled.nav`
-	width: clamp(300px, 38%, 700px);
+	width: clamp(300px, 50%, 900px);
 	height: fit-content;
 	margin: ${({ m }) => (m ? m : "")};
 	z-index: 3;
 
 	display: flex;
 	flex-direction: row;
-	align-items: baseline;
+	align-items: stretch;
 	justify-content: space-between;
 
 	position: fixed;
 	top: 0;
 
 	font-family: "FiraSans-Light";
+
+	Image {
+		background-color: yellow;
+	}
 
 	.linkdiv {
 		width: 90%;
@@ -327,6 +331,7 @@ export const Content = styled.div`
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 
 		.desc {
 			width: 50%;
@@ -403,7 +408,6 @@ export const Content = styled.div`
 		flex-direction: ${({ fd }) => (fd ? fd : "")};;
 		position: fixed;
 		height: ${({ ht }) => (ht ? ht : "clamp(300px, 80%, 1000px)")};
-		overflow-y: hidden;
 		transform: translateY(-12%);
 		
 
