@@ -1,7 +1,7 @@
-import React from "react";
+import { Content } from "../../../components/components";
 
 const About = () => {
-	return <div>About</div>;
+	return <Content style={{ color: "#9d9fa1" }}>About</Content>;
 };
 
 export default About;

@@ -350,7 +350,7 @@ export const Content = styled.div`
 				font-weight: 300;
 			}
 			.description {
-				color: #444444;
+				color: 4444;
 				width: 95%;
 				height: 30vh;
 				overflow: scroll;
@@ -382,12 +382,30 @@ export const Content = styled.div`
 		}
 	}
 
+	aside {
+		.port2button {
+			all: unset;
+			outline: none;
+			resize: none;
+			border: none;
+			font-family: "FiraSans-Light";
+			display: block,
+			transition: 0.2s ease-out;
+			color: #676768;
+			:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
 	@media only screen and (max-width: 767px) {
+		display: ${({ dp }) => (dp ? dp : "")};
+		flex-direction: ${({ fd }) => (fd ? fd : "")};;
 		position: fixed;
-		/* height: clamp(300px, 80%, 1000px); */
 		height: ${({ ht }) => (ht ? ht : "clamp(300px, 80%, 1000px)")};
 		overflow-y: hidden;
-		transform: translateY(-10%);
+		transform: translateY(-12%);
+		
 
 		.wrapper {
 			flex-direction: column;
@@ -417,6 +435,13 @@ export const Content = styled.div`
 				transform: perspective(0px) rotateY(0deg);
 			}
 		}
+
+		aside{
+			width: 100% !important;
+			
+		}
+
+		
 	}
 `;
 
