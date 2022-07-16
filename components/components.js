@@ -217,10 +217,12 @@ export const Card = styled(Image)`
 `;
 
 export const Nav = styled.nav`
-	width: clamp(300px, 50%, 900px);
+	width: clamp(600px, 60%, 900px);
 	height: fit-content;
 	margin: ${({ m }) => (m ? m : "")};
 	z-index: 3;
+
+	background-color: red;
 
 	display: flex;
 	flex-direction: row;
