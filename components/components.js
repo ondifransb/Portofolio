@@ -371,6 +371,8 @@ export const Content = styled.div`
 		}
 	}
 
+	
+
 	.ulwrapper {
 		height: 100%;
 		display: flex;
@@ -407,18 +409,24 @@ export const Content = styled.div`
 		display: ${({ dp }) => (dp ? dp : "")};
 		flex-direction: ${({ fd }) => (fd ? fd : "")};;
 		position: fixed;
-		height: ${({ ht }) => (ht ? ht : "clamp(300px, 80%, 1000px)")};
-		transform: translateY(-12%);
+		height: ${({ ht }) => (ht ? ht : "clamp(350px, 82%, 1000px)")};
+		transform: translateY(${({ ty }) => (ty ? ty : "")});
+
+		
 		
 
 		.wrapper {
 			flex-direction: column;
+			align-items: flex-start;
+			overflow-y: scroll;
 
 			.desc {
 				width: fit-content;
-				height: 70vh;
-
+				height: 50%;
 				order: 2;
+				transform: translateY(-15%);
+
+				
 
 				.category {
 					background-color: transparent;
@@ -431,10 +439,13 @@ export const Content = styled.div`
 				}
 				.description {
 					width: 100%;
-					height: 50%;
+					overflow-y: scroll;
+
+					
 				}
 			}
 			.img {
+				height: 50%;
 				order: 1;
 				transform: perspective(0px) rotateY(0deg);
 			}

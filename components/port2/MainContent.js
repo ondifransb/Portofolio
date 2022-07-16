@@ -12,12 +12,13 @@ import { BigScreen } from "./bigNav";
 
 const MainContent = () => {
 	const data = AMData;
-	const { Show, navVal, close } = useContext(ShowContext);
+	const { Show, navVal, close, width } = useContext(ShowContext);
+	console.log(width);
 
 	const renderit2 = () => {
 		return (data || []).map((e) => {
 			return Show == e.id && navVal == 0 ? (
-				<Content key={e.id}>
+				<Content key={e.id} ty={width < 321 ? "-12%" : "0"}>
 					<div className="wrapper">
 						<div className="desc" key={e.id}>
 							<span className="category">{e.category}</span>
