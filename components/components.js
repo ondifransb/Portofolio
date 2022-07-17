@@ -409,6 +409,43 @@ export const Content = styled.div`
 		}
 	}
 
+	.labelport6{
+		opacity: 0.5;
+		/* background-color: red; */
+	}
+
+	.inputport6{
+	all: unset;
+	width: clamp(200px, 20vw, 400ox);
+	resize: "none";
+	outline: "1px solid black";
+	border: "none";
+	border-bottom: 1px solid black;
+	height: 20px;
+	white-space: normal;
+    
+	
+	
+	}
+
+	.buttonport6{
+		all: unset;
+		text-align: center;
+		width: 100px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 10px;
+		border: 1px solid black;
+
+		:hover{
+			cursor: pointer;
+		}
+
+	}
+
 	@media only screen and (max-width: 767px) {
 		display: ${({ dp }) => (dp ? dp : "")};
 		flex-direction: ${({ fd }) => (fd ? fd : "")};;
