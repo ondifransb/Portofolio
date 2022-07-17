@@ -1,5 +1,13 @@
 const Index = () => {
-	return <div>Index</div>;
+	return (
+		<div
+			style={{
+				textAlign: "center",
+			}}
+		>
+			Coming soon
+		</div>
+	);
 };
 
 export default Index;

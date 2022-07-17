@@ -16,15 +16,11 @@ const Main = () => {
 	const LeftArrow = () => {
 		setChange(false);
 		setdata(AvanaData);
-
-		console.log(Change);
 	};
 
 	const RightArrow = () => {
 		setChange(true);
 		setdata(AvanaData2);
-
-		console.log(Change);
 	};
 
 	return (

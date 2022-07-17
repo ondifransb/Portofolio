@@ -13,7 +13,6 @@ import { BigScreen } from "./bigNav";
 const MainContent = () => {
 	const data = AMData;
 	const { Show, navVal, close, width } = useContext(ShowContext);
-	console.log(width);
 
 	const renderit2 = () => {
 		return (data || []).map((e) => {
