@@ -85,7 +85,6 @@ const MainContent = () => {
 				display: "flex",
 				flex: "1 1 auto",
 				alignItems: "center",
-				background: "red",
 				height: "50vh",
 				overflow: "scroll",
 			}}

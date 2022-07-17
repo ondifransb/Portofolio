@@ -85,6 +85,7 @@ export const FirstSection = styled.section`
 
 	min-height: ${({ ht }) => (ht ? ht : "fit-content")};
 	width: 100vw;
+	overflow-x: hidden;
 
 	.vidwrap {
 		-o-object-fit: cover;

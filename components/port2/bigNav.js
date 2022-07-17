@@ -3,14 +3,21 @@ import { ShowContext } from "../../pages/port2/main";
 import { useContext } from "react";
 
 export const BigScreen = () => {
-	const { setnavVal, setclose } = useContext(ShowContext);
+	const { setnavVal, setclose, width } = useContext(ShowContext);
 	const change = (e) => {
 		setnavVal(e);
 		setclose(false);
 	};
 
+	const flexd = width > 414 ? "row" : "column";
+
 	return (
-		<>
+		<div
+			style={{
+				display: "flex",
+				flexDirection: flexd,
+			}}
+		>
 			<span
 				style={{ color: "#9d9fa1", margin: "1rem" }}
 				onMouseEnter={() => change(1)}
@@ -56,7 +63,7 @@ export const BigScreen = () => {
 					}}
 				/>
 			</span>
-		</>
+		</div>
 	);
 };
 
