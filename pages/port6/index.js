@@ -5,7 +5,7 @@ const Index = () => {
 				textAlign: "center",
 			}}
 		>
-			soon
+			Coming soon
 		</div>
 	);
 };
